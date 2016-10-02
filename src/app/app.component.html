@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  Music App
+</md-toolbar>
+<div>
+
+  <md-tab-group>
+    <md-tab>
+      <template md-tab-label>ALBUMS ({{count}})</template>
+
+      <template md-tab-content>
+        <md-grid-list cols="4" rowHeight="1:1">
+          <md-grid-tile *ngFor="let album of albums">
+            <img src="{{ album.images[0].url }}" alt="Photo of {{ album.name }}">
+            <md-grid-tile-footer>
+              <h3 md-line>{{ album.name }}</h3>
+              <h3 md-line>{{ artist.name }}</h3>
+            </md-grid-tile-footer>
+          </md-grid-tile>
+        </md-grid-list>
+      </template>
+    </md-tab>
+
+    <md-tab>
+      <template md-tab-label>SINGLES (7)</template>
+
+      <template md-tab-content>
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </template>
+    </md-tab>
+  </md-tab-group>
+
+</div>

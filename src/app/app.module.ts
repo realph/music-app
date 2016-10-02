@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
+import { DataService } from './data.service';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,9 +14,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    DataService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
