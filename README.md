@@ -1,4 +1,6 @@
-# A2
+# Music App
+
+![](http://i.imgur.com/2CG5yAA.jpg)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
